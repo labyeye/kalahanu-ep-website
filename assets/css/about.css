@@ -6637,7 +6637,7 @@ figcaption {
 }
 
 .show-section {
-  height: 200vh;
+  height: 100vh;
   position: relative;
 }
 
@@ -6953,13 +6953,13 @@ figcaption {
 }
 
 .title-scroll-wrapper {
-  grid-column-gap: 0.56vw;
+  grid-column-gap: 0.66vw;
   grid-row-gap: 0.56vw;
   flex-flow: column;
   justify-content: center;
   align-items: center;
-  min-width: 75.7vw;
-  max-width: 75.7vw;
+  min-width: 20.7vw;
+  max-width: 45.7vw;
   display: flex;
   position: relative;
 }
@@ -8409,11 +8409,11 @@ figcaption {
   }
 
   .title-scroll-wrapper {
-    grid-column-gap: 0.5rem;
-    grid-row-gap: 0.5rem;
+    grid-column-gap: 0.8rem;
+    grid-row-gap: 0.8rem;
     justify-content: center;
     align-items: center;
-    min-width: 45.4rem;
+    min-width: 20.4rem;
     max-width: 45.4rem;
   }
 
@@ -9003,8 +9003,8 @@ figcaption {
     grid-column-gap: 0.5rem;
     grid-row-gap: 0.5rem;
     flex-flow: column;
-    min-width: 28.4rem;
-    max-width: 28.4rem;
+    min-width: 15.4rem;
+    max-width: 15.4rem;
   }
 
   .h5-scroll {
@@ -9920,8 +9920,8 @@ figcaption {
 
   .title-scroll-wrapper {
     flex-flow: column;
-    min-width: 17rem;
-    max-width: 17rem;
+    min-width: 10rem;
+    max-width: 10rem;
   }
 
   .h5-scroll {
