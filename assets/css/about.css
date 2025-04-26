@@ -3398,9 +3398,8 @@ h4 {
 h5 {
   letter-spacing: .14vw;
   text-transform: uppercase;
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: 1vw;
+  margin: auto;
+  font-size: 2vw;
   font-weight: 400;
   line-height: 1.11vw;
 }
@@ -4587,7 +4586,7 @@ figcaption {
 .contact-info {
   grid-column-gap: .5rem;
   grid-row-gap: .5rem;
-  background-color: var(--matte);
+  background-color: var(--cream);
   flex-direction: column;
   min-width: 100%;
   max-width: 100%;
@@ -5457,8 +5456,11 @@ figcaption {
 }
 
 .team-occupation {
-  color: #f5f5f5;
+  color: #000000;
   line-height: .9;
+  font-size: 1rem;
+  margin: auto;
+  text-align: center;
 }
 
 .social-link-round {
@@ -5546,17 +5548,19 @@ figcaption {
   text-transform: uppercase;
   font-size: 1.11vw;
   line-height: 1vw;
+  margin-top: 20px;
 }
 
 .team-name-card {
   z-index: 2;
   grid-column-gap: .56vw;
   grid-row-gap: .56vw;
-  background-color: var(--matte);
+  background-color: var(--cream);
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 14.6vw;
+  border-color: #000;
   min-height: 4.9vw;
   margin-left: auto;
   margin-right: auto;
