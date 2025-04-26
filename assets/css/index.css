@@ -209,6 +209,16 @@ th {
     font-weight: normal;
     font-style: normal;
 }
+@font-face {
+    font-family: "Loew";
+    /* the name you will use later  */
+    src: url("../fonts/loew-regular.woff2") format("woff2");
+    font-weight: 200;
+    /* Bold weight */
+    font-style: normal;
+    font-display: swap;
+    /* optional—but recommended */
+  }
 
 [class^="w-icon-"],
 [class*=" w-icon-"] {
@@ -261,7 +271,9 @@ body {
     background-color: #fff;
     min-height: 100%;
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode',
+    Geneva, Verdana, sans-serif;
     font-size: 14px;
     line-height: 20px;
 }
@@ -269,8 +281,9 @@ body {
     text-align: center;
     padding: 300px;
     font-size: 9rem;
-    font-family: sans-serif;
-}
+    font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode',
+    Geneva, Verdana, sans-serif;}
 
 img {
     vertical-align: middle;
@@ -1496,8 +1509,9 @@ textarea.w-select {
     .welcome-text {
         padding: 40px 20px;
         font-size: 24px;
-        font-family: sans-serif;
-
+        font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
+        'Lucida Grande', 'Lucida Sans Unicode',
+        Geneva, Verdana, sans-serif;
     }
 }
 
@@ -3365,7 +3379,9 @@ body {
     background-color: var(--cream);
     color: var(--black);
     flex-direction: column;
-    font-family: Satoshi, sans-serif;
+    font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
+    'Lucida Grande', 'Lucida Sans Unicode',
+    Geneva, Verdana, sans-serif;
     font-size: 1.11vw;
     font-weight: 400;
     line-height: 1.89vw;
@@ -4599,7 +4615,7 @@ figcaption {
 .contact-info {
     grid-column-gap: .5rem;
     grid-row-gap: .5rem;
-    background-color: var(--matte);
+    background-color: var(--cream);
     flex-direction: column;
     min-width: 100%;
     max-width: 100%;
@@ -6653,8 +6669,7 @@ figcaption {
 .show-section {
     height: 90vh;
     position: relative;
-    align-items: center;
-    justify-content: center;
+
 }
 
 .show-section-absolute {
@@ -9119,7 +9134,9 @@ figcaption {
     .welcome-text {
         padding: 100px 15px;
         font-size: 45px;
-        font-family: sans-serif;
+        font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
+        'Lucida Grande', 'Lucida Sans Unicode',
+        Geneva, Verdana, sans-serif;
 
     }
    

@@ -70,14 +70,15 @@
 
       .nav-content {
         display: flex;
-        justify-content: center; /* Make content center */
+        justify-content: space-between; 
         align-items: center;
         position: relative;
+        width: 100%;
       }
 
       .logo-link {
-        position: absolute;
-        left: 280px; /* Adjust how much right you want it */
+        position: static; 
+        order: 1; 
       }
 
       .logo-link img {
@@ -90,6 +91,7 @@
         background: #faf8f8;
         padding: 10px 25px;
         border-radius: 25px;
+        order: 2; 
       }
 
       .navbar-link {
@@ -105,7 +107,8 @@
       }
 
       .burger-wrapper {
-        display: none;
+        order: 3; /* Puts burger on right */
+        margin-left: auto; /* Pushes it to far right */
       }
 
       .burger {
@@ -170,7 +173,12 @@
         .burger-wrapper {
           display: flex;
         }
+
+        .logo-link {
+          margin-right: auto; /* Keeps logo on left when burger appears */
+        }
       }
+
       .close-button {
         position: absolute;
         top: 20px;
@@ -195,7 +203,7 @@
       /* Channel Partners Carousel */
       .partners-section {
         padding: 60px 20px;
-        width: 90%;
+        width: 100%;
         margin: 0 auto;
         overflow: hidden;
         background-color: #f9f9f9;
@@ -203,7 +211,7 @@
 
       .partners-title {
         text-align: center;
-        font-size: 28px;
+        font-size: 38px;
         margin-bottom: 40px;
         color: #333;
       }
@@ -273,6 +281,237 @@
           margin-bottom: 30px;
         }
       }
+      .enhanced-footer {
+        background-color: #faf8f8;
+        padding: 0;
+        font-family: "Open Sans", sans-serif;
+        position: relative;
+        margin-top: 60px;
+      }
+
+      @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css");
+
+      /* Footer Top Section */
+      .footer-top {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 60px 80px;
+        background-color: #faf8f8;
+        border-radius: 20px 20px 0 0;
+      }
+
+      /* Logo Section */
+      .footer-logo-section {
+        flex: 1;
+        min-width: 250px;
+        padding-right: 40px;
+        margin-bottom: 30px;
+      }
+
+      .footer-logo {
+        height: 60px;
+        margin-bottom: 20px;
+      }
+
+      .company-description {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #666;
+        margin-bottom: 20px;
+      }
+
+      .footer-links-container {
+        display: flex;
+        flex: 2;
+        flex-wrap: wrap;
+        gap: 40px;
+      }
+
+      .footer-links-column {
+        flex: 1;
+        min-width: 180px;
+      }
+
+      .footer-heading {
+        font-size: 18px;
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 20px;
+        position: relative;
+        padding-bottom: 10px;
+      }
+
+      .footer-heading::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 30px;
+        height: 3px;
+        background-color: #007bff;
+      }
+
+      /* Quick Links */
+      .footer-links {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 12px;
+      }
+
+      .footer-links a {
+        color: #555;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 14px;
+        position: relative;
+        padding-left: 15px;
+      }
+
+      .footer-links a::before {
+        content: "›";
+        position: absolute;
+        left: 0;
+        top: -1px;
+        color: #007bff;
+        font-size: 18px;
+      }
+
+      .footer-links a:hover {
+        color: #007bff;
+        transform: translateX(3px);
+      }
+
+      /* Contact Info */
+      .contact-info {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .contact-item i {
+        color: #007bff;
+        margin-top: 4px;
+      }
+
+      .contact-item span {
+        font-size: 14px;
+        color: #555;
+        line-height: 1.5;
+      }
+
+      /* Footer Bottom Section */
+      .footer-bottom {
+        background-color: #faf8f8;
+        padding: 20px 80px;
+      }
+
+      .footer-bottom-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .copyright p {
+        font-size: 14px;
+        color: #666;
+        margin: 0;
+      }
+
+      .footer-utility-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      .footer-utility-links a {
+        font-size: 14px;
+        color: #666;
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+
+      .footer-utility-links a:hover {
+        color: #007bff;
+      }
+
+      .built-by {
+        font-size: 14px;
+        color: #666;
+      }
+
+      .built-by a {
+        color: #007bff;
+        text-decoration: none;
+        font-weight: 600;
+      }
+
+      /* Responsive Adjustments */
+      @media (max-width: 992px) {
+        .footer-top {
+          padding: 50px 40px;
+        }
+
+        .footer-bottom {
+          padding: 20px 40px;
+        }
+
+        .footer-logo-section {
+          flex: 100%;
+          padding-right: 0;
+          margin-bottom: 40px;
+        }
+
+        .footer-links-container {
+          flex: 100%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .footer-bottom-content {
+          flex-direction: column;
+          text-align: center;
+        }
+
+        .footer-utility-links {
+          order: 2;
+        }
+
+        .built-by {
+          order: 3;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .footer-top {
+          padding: 40px 20px;
+        }
+
+        .footer-bottom {
+          padding: 20px;
+        }
+
+        .footer-links-column {
+          flex: 100%;
+          min-width: 100%;
+        }
+
+        .footer-utility-links {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 15px;
+        }
+      }
     </style>
 
     <script type="text/javascript">
@@ -329,10 +568,10 @@
           </a>
           <div class="nav-links-container" id="navLinks">
             <a href="./index.html" class="navbar-link">Home</a>
-            <a href="./about-us.html" class="navbar-link">About Us</a>
-            <a href="./features.html" class="navbar-link">Features</a>
-            <a href="./blog.html" class="navbar-link">Blog</a>
-            <a href="./packages.html" class="navbar-link">Packages</a>
+            <a href="./about.html" class="navbar-link">About Us</a>
+            <a href="./features.html" class="navbar-link">Brands</a>
+            <a href="./blog.html" class="navbar-link">Awards</a>
+            <a href="./packages.html" class="navbar-link">Career</a>
             <a href="./contact.html" class="navbar-link">Contact</a>
           </div>
 
@@ -348,7 +587,7 @@
       <div id="mobileMenu" class="mobile-menu">
         <div id="closeMenu" class="close-button">×</div>
         <a href="./index.html" class="mobile-link">Home</a>
-        <a href="./about-us.html" class="mobile-link">About Us</a>
+        <a href="./about.html" class="mobile-link">About Us</a>
         <a href="./features.html" class="mobile-link">Features</a>
         <a href="./blog.html" class="mobile-link">Blog</a>
         <a href="./packages.html" class="mobile-link">Packages</a>
@@ -408,83 +647,75 @@
             alt="Apple"
             class="partner-logo"
           />
-          
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <div
-        class="w-layout-blockcontainer container-full padding-72px w-container"
-      >
-        <div class="space-large"></div>
-        <div
-          data-w-id="d1c2fa93-6d0c-0c55-fec3-f2ecb098e12d"
-          class="footer-grid shadow"
-        >
-          <div
-            id="w-node-d1c2fa93-6d0c-0c55-fec3-f2ecb098e133-652fe2cd"
-            class="block-wrapper"
-          >
-            <h5>Office</h5>
-            <p class="max-width-20vw">
-              XYZ Times Sq, New York, 10000, United States
+    <section class="enhanced-footer">
+      <div class="footer-top">
+        <div class="footer-logo-section">
+          <img
+            src="./assets/images/logokh.svg"
+            alt="Kalahanu Logo"
+            class="footer-logo"
+          />
+          <p class="company-description">
+            Kalahanu Enterprises Private Limited provides high-quality solutions
+            and services across multiple industries with a commitment to
+            excellence and customer satisfaction.
+          </p>
+        </div>
+
+        <div class="footer-links-container">
+          <div class="footer-links-column">
+            <h5 class="footer-heading">Quick Links</h5>
+            <ul class="footer-links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About Us</a></li>
+              <li><a href="./features.html">Brands</a></li>
+              <li><a href="./blog.html">Awards</a></li>
+              <li><a href="./packages.html">Career</a></li>
+              <li><a href="./contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links-column">
+            <h5 class="footer-heading">Contact Us</h5>
+            <div class="contact-info">
+              <div class="contact-item">
+                <i class="fa fa-map-marker"></i>
+                <span style="color: black"
+                  >5 IAS Colony, Kidwaipuri, Near Axis Bank. Patna 800001</span
+                >
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-envelope"></i>
+                <span style="color: black">kepl.hr@kalahanub.com</span>
+              </div>
+              <div class="contact-item">
+                <i class="fa fa-phone"></i>
+                <span style="color: black">+1 023-456-789</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-bottom-content">
+          <div class="copyright">
+            <p>© 2025 Kalahanu. All Rights Reserved.</p>
+          </div>
+
+          <div class="built-by">
+            <p>
+              Built by
+              <a href="https://pixelatenest.com" target="_blank"
+                >Pixelate Nest</a
+              >
             </p>
           </div>
-          <div
-            id="w-node-d1c2fa93-6d0c-0c55-fec3-f2ecb098e138-652fe2cd"
-            class="block-wrapper"
-          >
-            <h5>Contacts</h5>
-            <p class="max-width-20vw">
-              kepl.hr@kalahanub.com<br />+1 023-456-789
-            </p>
-          </div>
-          <div class="footer-background"></div>
         </div>
-        <div class="space"></div>
-        <div class="grid-12-columns">
-          <a
-            id="w-node-_7dc3c09c-0ec2-7d21-8d86-8be771fee733-652fe2cd"
-            href="/utilities/style-guide"
-            class="centered w-inline-block"
-            ><h6 class="medium">style guide</h6></a
-          ><a
-            id="w-node-_7dc3c09c-0ec2-7d21-8d86-8be771fee736-652fe2cd"
-            href="/utilities/licenses"
-            class="centered w-inline-block"
-            ><h6 class="medium">licenses</h6></a
-          ><a
-            id="w-node-_7dc3c09c-0ec2-7d21-8d86-8be771fee739-652fe2cd"
-            href="/utilities/changelog"
-            class="centered w-inline-block"
-            ><h6 class="medium">changelog</h6></a
-          ><a
-            id="w-node-_7dc3c09c-0ec2-7d21-8d86-8be771fee730-652fe2cd"
-            href="/utilities/instructions"
-            class="centered w-inline-block"
-            ><h6 class="medium">Instructions</h6></a
-          >
-        </div>
-        <div class="space-semi"></div>
-        <div
-          data-w-id="7511f9df-060d-cd6f-8f86-c153652fe2fb"
-          class="footer-flex"
-        >
-          <div class="w-layout-hflex footer-flex-block">
-            <h5 style="color: black">Built by</h5>
-            <a
-              href="https://pixelatenest.com"
-              target="_blank"
-              class="w-inline-block"
-              ><h5>Pixelate Nest</h5></a
-            >
-          </div>
-        </div>
-        <div class="space-text"></div>
-        <h6 data-w-id="fb8b7d54-8ba7-a54f-90f4-547aaa860718" class="centered">
-          © 2025 Kalahanu. All Rights Reserved.
-        </h6>
       </div>
     </section>
     <script
