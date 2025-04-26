@@ -209,16 +209,6 @@ th {
     font-weight: normal;
     font-style: normal;
 }
-@font-face {
-    font-family: "Loew";
-    /* the name you will use later  */
-    src: url("../fonts/loew-regular.woff2") format("woff2");
-    font-weight: 200;
-    /* Bold weight */
-    font-style: normal;
-    font-display: swap;
-    /* optional—but recommended */
-  }
 
 [class^="w-icon-"],
 [class*=" w-icon-"] {
@@ -268,22 +258,13 @@ html {
 
 body {
     color: #333;
-    background-color: #fff;
+    background-color: var(--cream);
     min-height: 100%;
     margin: 0;
-    font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
-    'Lucida Grande', 'Lucida Sans Unicode',
-    Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
     font-size: 14px;
     line-height: 20px;
 }
-.welcome-text{
-    text-align: center;
-    padding: 300px;
-    font-size: 9rem;
-    font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
-    'Lucida Grande', 'Lucida Sans Unicode',
-    Geneva, Verdana, sans-serif;}
 
 img {
     vertical-align: middle;
@@ -351,37 +332,6 @@ pre.w-code-block code {
     display: contents;
 }
 
-.w-webflow-badge {
-    white-space: nowrap;
-    cursor: pointer;
-    box-shadow: 0 0 0 1px #0000001a, 0 1px 3px #0000001a;
-    visibility: visible !important;
-    opacity: 1 !important;
-    z-index: 2147483647 !important;
-    color: #aaadb0 !important;
-    overflow: unset !important;
-    background-color: #fff !important;
-    border-radius: 3px !important;
-    width: auto !important;
-    height: auto !important;
-    margin: 0 !important;
-    padding: 6px !important;
-    font-size: 12px !important;
-    line-height: 14px !important;
-    text-decoration: none !important;
-    display: inline-block !important;
-    position: fixed !important;
-    inset: auto 12px 12px auto !important;
-    transform: none !important;
-}
-
-.w-webflow-badge>img {
-    position: unset;
-    visibility: unset !important;
-    opacity: 1 !important;
-    vertical-align: middle !important;
-    display: inline-block !important;
-}
 
 h1,
 h2,
@@ -1455,13 +1405,6 @@ textarea.w-select {
     .w-nav-brand {
         padding-left: 10px;
     }
-    .welcome-text {
-        padding: 40px 20px;
-        font-size: 24px;
-        font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
-        'Lucida Grande', 'Lucida Sans Unicode',
-        Geneva, Verdana, sans-serif;
-    }
 }
 
 .w-lightbox-backdrop {
@@ -2143,7 +2086,7 @@ textarea.w-select {
 }
 
 :root {
-    --cream: #faf8f8;
+    --cream:#FAF8F8;
     --black: #1d2025;
     --white: whitesmoke;
     --light-gray: #d0d0d0;
@@ -3328,9 +3271,7 @@ body {
     background-color: var(--cream);
     color: var(--black);
     flex-direction: column;
-    font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
-    'Lucida Grande', 'Lucida Sans Unicode',
-    Geneva, Verdana, sans-serif;
+    font-family: Satoshi, sans-serif;
     font-size: 1.11vw;
     font-weight: 400;
     line-height: 1.89vw;
@@ -4564,7 +4505,7 @@ figcaption {
 .contact-info {
     grid-column-gap: .5rem;
     grid-row-gap: .5rem;
-    background-color: var(--cream);
+    background-color: #5F9EA0;
     flex-direction: column;
     min-width: 100%;
     max-width: 100%;
@@ -4865,7 +4806,7 @@ figcaption {
 }
 
 .nav-link {
-    color: var(--black);
+    color: var(--white);
     text-transform: uppercase;
     white-space: nowrap;
     font-size: 3.9vw;
@@ -5220,7 +5161,7 @@ figcaption {
 
 .nav-menu {
     z-index: 997;
-    background-color: var(--cream);
+    background-color: var(--black);
     text-align: left;
     flex-flow: row;
     justify-content: center;
@@ -5268,7 +5209,7 @@ figcaption {
 }
 
 .menu-burger-wrapper:hover {
-    border-color: #000000;
+    border-color: #fff;
 }
 
 .navbar {
@@ -5321,7 +5262,6 @@ figcaption {
     background-color: var(--matte);
     position: absolute;
     inset: 0%;
-    align-items: center;
 }
 
 .footer-email {
@@ -5617,7 +5557,7 @@ figcaption {
 .logo-light {
     filter: invert(0%);
     white-space: nowrap;
-    min-width: 4vw;
+    min-width: 7vw;
     max-width: 7vw;
     font-size: 1.3125rem;
     font-weight: 600;
@@ -5625,15 +5565,12 @@ figcaption {
 }
 
 .menu-burger-light {
+    filter: invert();
     min-width: 3.47vw;
     max-width: 3.47vw;
     min-height: 3.47vw;
     max-height: 3.47vw;
 }
-.menu-burger-light svg path {
-    fill: black !important;
-  }
-  
 
 .nav-cart-menu-flex {
     z-index: 999;
@@ -6616,9 +6553,8 @@ figcaption {
 }
 
 .show-section {
-    height: 90vh;
+    height: 200vh;
     position: relative;
-
 }
 
 .show-section-absolute {
@@ -6680,7 +6616,7 @@ figcaption {
 }
 
 .hero-section {
-    background-color: var(--white);
+    background-color: var(--cream);
     width: 100%;
     position: relative;
 }
@@ -7803,7 +7739,7 @@ figcaption {
     }
 
     .logo-light {
-        min-width: 4rem;
+        min-width: 6rem;
         max-width: 6rem;
     }
 
@@ -7813,10 +7749,6 @@ figcaption {
         min-height: 2.5rem;
         max-height: 2.5rem;
     }
-    .menu-burger-light svg path {
-        fill: black !important;
-      }
-      
 
     .nav-cart-menu-flex {
         z-index: 10000;
@@ -9080,16 +9012,6 @@ figcaption {
         align-items: center;
         line-height: 2;
     }
-    .welcome-text {
-        padding: 100px 15px;
-        font-size: 45px;
-        font-family: "Loew", 'Lucida Sans', 'Lucida Sans Regular',
-        'Lucida Grande', 'Lucida Sans Unicode',
-        Geneva, Verdana, sans-serif;
-
-    }
-   
-    
 
     .nav-tab-law {
         padding-left: 0;
