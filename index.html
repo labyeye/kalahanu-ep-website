@@ -70,15 +70,14 @@
 
       .nav-content {
         display: flex;
-        justify-content: space-between; 
         align-items: center;
         position: relative;
-        width: 100%;
       }
 
       .logo-link {
-        position: static; 
-        order: 1; 
+        position: static;
+        margin-right: auto;
+        margin-left: 290px;
       }
 
       .logo-link img {
@@ -91,7 +90,9 @@
         background: #faf8f8;
         padding: 10px 25px;
         border-radius: 25px;
-        order: 2; 
+        position: absolute; /* Position absolutely to center */
+        left: 50%;
+        transform: translateX(-50%); /* True center alignment */
       }
 
       .navbar-link {
@@ -107,8 +108,8 @@
       }
 
       .burger-wrapper {
-        order: 3; /* Puts burger on right */
-        margin-left: auto; /* Pushes it to far right */
+        margin-left: auto;
+        display: none;
       }
 
       .burger {
@@ -127,7 +128,6 @@
         border-radius: 2px;
       }
 
-      /* Mobile Full screen menu */
       .mobile-menu {
         opacity: 0;
         transform: translateY(-100%);
@@ -146,7 +146,6 @@
         z-index: 1000;
       }
 
-      /* When active */
       .mobile-menu.active {
         opacity: 1;
         transform: translateY(0);
@@ -175,10 +174,9 @@
         }
 
         .logo-link {
-          margin-right: auto; /* Keeps logo on left when burger appears */
+          margin-left: 40px;
         }
       }
-
       .close-button {
         position: absolute;
         top: 20px;
@@ -192,6 +190,14 @@
         color: #007bff;
       }
       @media (max-width: 479px) {
+        .logo-link {
+          margin-left: 20px;
+        }
+
+        .logo-link img {
+          height: 50px;
+        }
+
         .container-blur {
           backdrop-filter: blur(10px);
           background-color: #faf8f8;
@@ -568,7 +574,7 @@
           </a>
           <div class="nav-links-container" id="navLinks">
             <a href="./index.html" class="navbar-link">Home</a>
-            <a href="./about.html" class="navbar-link">About Us</a>
+            <a href="../about.html" class="navbar-link">About Us</a>
             <a href="./features.html" class="navbar-link">Brands</a>
             <a href="./blog.html" class="navbar-link">Awards</a>
             <a href="./packages.html" class="navbar-link">Career</a>
@@ -587,7 +593,7 @@
       <div id="mobileMenu" class="mobile-menu">
         <div id="closeMenu" class="close-button">×</div>
         <a href="./index.html" class="mobile-link">Home</a>
-        <a href="./about.html" class="mobile-link">About Us</a>
+        <a href="../about.html" class="mobile-link">About Us</a>
         <a href="./features.html" class="mobile-link">Features</a>
         <a href="./blog.html" class="mobile-link">Blog</a>
         <a href="./packages.html" class="mobile-link">Packages</a>
@@ -671,7 +677,7 @@
             <h5 class="footer-heading">Quick Links</h5>
             <ul class="footer-links">
               <li><a href="./index.html">Home</a></li>
-              <li><a href="./about.html">About Us</a></li>
+              <li><a href="../about.html">About Us</a></li>
               <li><a href="./features.html">Brands</a></li>
               <li><a href="./blog.html">Awards</a></li>
               <li><a href="./packages.html">Career</a></li>
