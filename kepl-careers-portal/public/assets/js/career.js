@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
     async function fetchJobs() {
       try {
         // Use relative path to your API
-        const response = await fetch('http://localhost:3000/api/jobs');
+        const response = await fetch('https://kalahanu-ep-website.onrender.com/api/jobs');
         
         if (!response.ok) {
           throw new Error('Network response was not ok');
