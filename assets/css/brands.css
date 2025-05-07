@@ -1,0 +1,408 @@
+/* Common styles */
+body {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #faf8f8;
+  }
+  
+  /* Navbar */
+  .container-blur {
+    backdrop-filter: blur(10px);
+    background-color: #faf8f8;
+    padding: 10px 20px;
+    border-radius: 12px;
+    width: 100%;
+  }
+  
+  .nav-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+  }
+  
+  .logo-link {
+    margin-right: auto;
+  }
+  
+  .logo-link img {
+    height: 70px;
+  }
+  
+  .nav-links-container {
+    display: flex;
+    gap: 25px;
+    background: #faf8f8;
+    padding: 10px 25px;
+    border-radius: 25px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  .navbar-link {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    transition: color 0.3s;
+  }
+  
+  .navbar-link:hover {
+    color: #007bff;
+  }
+  
+  .burger-wrapper {
+    margin-left: auto;
+    display: none;
+  }
+  
+  .burger {
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+  }
+  
+  .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 2px;
+  }
+  
+  /* Mobile Menu */
+  .mobile-menu {
+    opacity: 0;
+    transform: translateY(-100%);
+    transition: all 0.5s ease;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    z-index: 1000;
+  }
+  
+  .mobile-menu.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+  }
+  
+  .mobile-link {
+    margin: 15px 0;
+    font-size: 24px;
+    color: #333;
+    text-decoration: none;
+  }
+  
+  .mobile-link:hover {
+    color: #007bff;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .close-button:hover {
+    color: #007bff;
+  }
+  
+  /* Brands Section */
+  .brands-section {
+    padding: 60px 20px;
+    width: 100%;
+  }
+  
+  .brands-title {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .brands-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .row {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Brand Cards */
+  .brand-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .brand-card.rectangle {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .brand-card.square {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .brand-card img {
+    width: 30%;
+    object-fit: contain;
+    border-radius: 15px 15px 0 0;
+  }
+  
+  .card-content {
+    display: flex;
+    width: 100%;
+    align-items: center;
+  }
+  
+  .card-content.reverse {
+    flex-direction: row-reverse;
+  }
+  
+  .text-content {
+    flex: 1;
+    padding: 30px;
+  }
+  
+  .text-content h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+  }
+  
+  .text-content p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+  }
+  
+  .view-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background 0.3s;
+  }
+  
+  .view-button:hover {
+    background: #0056b3;
+  }
+  
+  .square-desc {
+    font-size: 14px;
+    color: #555;
+    margin-top: 15px;
+  }
+  
+  /* Footer */
+  .enhanced-footer {
+    background-color: #faf8f8;
+    margin-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 80px;
+    background-color: #faf8f8;
+  }
+  
+  .footer-logo-section {
+    flex: 1;
+    min-width: 250px;
+    padding-right: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .footer-logo {
+    height: 60px;
+    margin-bottom: 20px;
+  }
+  
+  .company-description {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .footer-links-container {
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+  
+  .footer-links-column {
+    flex: 1;
+    min-width: 180px;
+  }
+  
+  .footer-heading {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+  }
+  
+  .footer-heading::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 30px;
+    height: 3px;
+    background-color: #007bff;
+  }
+  
+  .footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .footer-links li {
+    margin-bottom: 12px;
+  }
+  
+  .footer-links a {
+    color: #555;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s;
+  }
+  
+  .footer-links a:hover {
+    color: #007bff;
+  }
+  
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  
+  .contact-item i {
+    color: #007bff;
+  }
+  
+  .contact-item span {
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .footer-bottom {
+    background-color: #faf8f8;
+    padding: 20px 80px;
+  }
+  
+  .footer-bottom-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .footer-utility-links {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .footer-utility-links a {
+    font-size: 14px;
+    color: #666;
+    text-decoration: none;
+  }
+  
+  .footer-utility-links a:hover {
+    color: #007bff;
+  }
+  
+  /* Responsive */
+  @media (max-width: 992px) {
+    .footer-top {
+      padding: 50px 40px;
+    }
+  
+    .footer-bottom {
+      padding: 20px 40px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .nav-links-container {
+      display: none;
+    }
+  
+    .burger-wrapper {
+      display: flex;
+    }
+  
+    .row {
+      flex-direction: column;
+    }
+  
+    .brands-title {
+      font-size: 28px;
+    }
+  
+    .brand-card.rectangle, .brand-card.square {
+      width: 100%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .footer-top {
+      padding: 40px 20px;
+    }
+  
+    .footer-bottom {
+      padding: 20px;
+    }
+  
+    .brands-title {
+      font-size: 24px;
+    }
+  }
+  
