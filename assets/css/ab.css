@@ -1397,11 +1397,13 @@ figure {
 
 .cta-section {
   padding: 5rem 0;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.9),
-      rgba(0, 0, 0, 0.5)), url('https://media.licdn.com/dms/image/v2/C5612AQEX0qwfuI3Uzg/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1520137571988?e=2147483647&v=beta&t=RNMl8B1lgxBazpFRYNeI8zWpTnJpDVAEawfy3THvZQw');
+  background: linear-gradient(rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.5)), url('https://imgd.aeplcdn.com/1056x594/n/cw/ec/178257/pulsar-n250-right-side-view.jpeg?isig=0&q=80');
   color: white;
+  background-size: cover;
   text-align: center;
 }
+
 
 .cta-content {
   max-width: 800px;
