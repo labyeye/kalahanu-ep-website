@@ -1,7 +1,7 @@
 {
-    "name": "kepl-careers-portal",
+    "name": "KHB-careers-portal",
     "version": "1.0.0",
-    "description": "Careers portal for KEPL with admin dashboard",
+    "description": "Careers portal for KHB with admin dashboard",
     "main": "server.js",
     "scripts": {
         "start": "node server.js",

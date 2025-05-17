@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
       applyButtons.forEach(button => {
         button.addEventListener('click', function() {
           const jobTitle = this.closest('.job-card').querySelector('.job-title').textContent;
-          alert(`You're applying for the ${jobTitle} position. Please mail your CV to kepl.hr@kalahanub.com`);
+          alert(`You're applying for the ${jobTitle} position. Please mail your CV to KHB.hr@kalahanub.com`);
         });
       });
     }
