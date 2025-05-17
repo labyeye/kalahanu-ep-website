@@ -430,6 +430,7 @@ label {
   position: absolute;
   overflow: hidden;
 }
+
 .w-nav {
   z-index: 1000;
   background: #ddd;
@@ -446,6 +447,7 @@ label {
 .w-nav:after {
   clear: both;
 }
+
 .w-nav-link {
   vertical-align: top;
   color: #222;
@@ -767,6 +769,7 @@ figure {
   position: relative;
   overflow: visible;
 }
+
 .heading {
   text-transform: capitalize;
   margin-top: 0;
@@ -834,22 +837,42 @@ figure {
   transition: color 0.3s;
 }
 
-
+.purpose-title {
+  text-align: center;
+  color: rgb(0, 0, 0);
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 40px;
+}
 
 .values-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
   gap: 30px;
-  margin-top: 50px;
+  justify-content: center;
+}
+
+.values-section {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  background-image: url('https://d3sftlgbtusmnv.cloudfront.net/blog/wp-content/uploads/2024/09/Saptaparni-Caves-Cover-Image-840x425.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 40px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .value-card {
-background: linear-gradient(135deg, #5F9DA0, #7FBFBF, #D0F0F7);
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.49) 100%,
+      rgba(255, 255, 255, 0.49) 100%);
   border-radius: 16px;
   padding: 30px;
-  width: calc(30.333% - 15px);
-  min-height: 300px;
+  width: 180px;
+  height: 350px;
+  box-shadow: inset;
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -861,10 +884,11 @@ background: linear-gradient(135deg, #5F9DA0, #7FBFBF, #D0F0F7);
 }
 
 .value-card-icon {
-  width: 50px;
-  height: 50px;
+  width: 40px;
+  height: 40px;
   align-self: center;
   margin-bottom: 20px;
+  color: white;
 }
 
 .unified-card {
@@ -939,8 +963,8 @@ background: linear-gradient(135deg, #5F9DA0, #7FBFBF, #D0F0F7);
 }
 
 .value-card-title {
-  color: var(--black);
-  font-size: 1.5rem;
+  color: white;
+  font-size: 1rem;
   margin-bottom: 15px;
   font-weight: 400;
   text-align: center;
@@ -948,44 +972,23 @@ background: linear-gradient(135deg, #5F9DA0, #7FBFBF, #D0F0F7);
 }
 
 .value-card-text {
-  color: var(--black);
-  font-size: 1rem;
-  font-weight: 400;
+  color: white;
+  font-size: 0.9rem;
+  font-weight: 300;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   line-height: 1.6;
   text-align: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 991px) {
-  .container {
-    z-index: 2;
-    position: relative;
+/* Mobile styles */
+@media (max-width: 576px) {
+  .values-section {
+    padding: 3rem 0;
   }
-
+  
   .value-card {
-    width: calc(50% - 20px);
+    padding: 1.5rem 1rem;
   }
-}
-
-@media (max-width: 767px) {
-  .values-cards-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .value-card {
-    width: 100%;
-    max-width: 400px;
-  }
-  .value-card-text {
-  color: var(--black);
-  font-size: 1.3rem;
-  font-weight: 400;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  line-height: 1.6;
-  text-align: center;
-}
 }
 
 .navbar-link:hover {
@@ -1056,55 +1059,6 @@ background: linear-gradient(135deg, #5F9DA0, #7FBFBF, #D0F0F7);
   flex: 1;
   position: relative;
 }
-
-.loop-text-outer {
-  border-top: 1px solid var(--a--black);
-  border-bottom: 1px solid var(--a--black);
-  width: 100%;
-  margin-top: 1rem;
-  padding-top: 1.88rem;
-  padding-bottom: 1.88rem;
-  display: flex;
-  overflow: hidden;
-}
-
-
-.loop-text-inner {
-  flex-direction: row;
-  align-items: center;
-  display: flex;
-}
-
-.loop-text {
-  letter-spacing: -0.01em;
-  text-transform: capitalize;
-  white-space: nowrap;
-  font-family: Manrope, sans-serif;
-  font-size: 1.875rem;
-  font-weight: 400;
-  line-height: 120%;
-}
-
-.square-icon {
-  background-color: var(--a--white);
-  border-radius: 50%;
-  flex: none;
-  width: 0.625rem;
-  height: 0.625rem;
-  margin-left: 1.875rem;
-  margin-right: 1.875rem;
-}
-
-
-.content-vertical {
-  display: flex;
-}
-
-
-.content-vertical.gap {
-  flex-direction: column;
-}
-
 .info-card {
   background-image: linear-gradient(135deg, #202020, #161616);
   border-radius: 0.625rem;
@@ -1240,31 +1194,10 @@ background: linear-gradient(135deg, #5F9DA0, #7FBFBF, #D0F0F7);
 .hidden {
   display: none;
 }
-
-
-.loop-text-track {
-  flex: 1;
-  display: flex;
-}
-
-.partner-logo {
-  object-fit: scale-down;
-  min-height: 4.06rem;
-}
-
 .tag {
   color: var(--a--white);
 }
 
-.text-block {
-  color: var(--a--white);
-}
-
-.footer-column2 {
-  grid-column-gap: 3rem;
-  justify-content: space-between;
-  display: flex;
-}
 
 .burger-wrapper.tablet-visible {
   display: none;
