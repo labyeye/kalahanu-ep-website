@@ -222,13 +222,6 @@ th {
   font-family: webflow-icons !important;
 }
 
-.w-icon-slider-left:before {
-  content: "î˜";
-}
-
-.w-icon-nav-menu:before {
-  content: "î˜‚";
-}
 
 
 * {
