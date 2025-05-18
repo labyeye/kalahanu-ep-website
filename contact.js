@@ -6355,7 +6355,7 @@
       blueviolet: "#8A2BE2",
       brown: "#A52A2A",
       burlywood: "#DEB887",
-      cadetblue: "#5F9EA0",
+      cadetblue: "#AF1613",
       chartreuse: "#7FFF00",
       chocolate: "#D2691E",
       coral: "#FF7F50",
