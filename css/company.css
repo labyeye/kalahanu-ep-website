@@ -1,8 +1,3 @@
-
-
-
-
-
 .company-hero {
   position: relative;
   height: 680px;
@@ -46,11 +41,9 @@
 .company-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(8, 8, 20, 0.82) 0%,
-    rgba(88, 41, 11, 0.45) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(8, 8, 20, 0.82) 0%,
+      rgba(88, 41, 11, 0.45) 100%);
   z-index: 2;
 }
 
@@ -72,7 +65,6 @@
   letter-spacing: 2px;
   text-transform: uppercase;
   padding: 0.35rem 1.1rem;
-  border-radius: 50px;
   margin-bottom: 1.25rem;
 }
 
@@ -317,6 +309,7 @@
   padding: 0.3rem 1rem 1rem 1rem;
   text-align: left;
 }
+
 .cbrand-card-content h4 {
   padding: 0.1rem 1rem 0 1rem;
   text-align: center;
@@ -338,11 +331,9 @@
 .cbrand-card .cbrand-icon {
   width: 72px;
   height: 72px;
-  background: linear-gradient(
-    135deg,
-    var(--secondary-color),
-    var(--accent-color)
-  );
+  background: linear-gradient(135deg,
+      var(--secondary-color),
+      var(--accent-color));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -464,11 +455,9 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--secondary-color),
-    var(--accent-color)
-  );
+  background: linear-gradient(90deg,
+      var(--secondary-color),
+      var(--accent-color));
 }
 
 .award-card:hover {
@@ -479,11 +468,9 @@
 .award-icon {
   width: 72px;
   height: 72px;
-  background: linear-gradient(
-    135deg,
-    var(--secondary-color),
-    var(--accent-color)
-  );
+  background: linear-gradient(135deg,
+      var(--secondary-color),
+      var(--accent-color));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -803,5 +790,119 @@
   .director-photo-wrap {
     max-width: 240px;
     margin: 0 auto 2rem;
+  }
+}
+
+/* ── Companies Gallery Masonry ── */
+.companies-gallery-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1020 100%);
+}
+
+.companies-gallery-section .section-header {
+  margin-bottom: 4rem;
+}
+
+.companies-gallery-masonry {
+  columns: 1;
+  column-gap: 10px;
+}
+
+.gallery-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  break-inside: avoid;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
+  transition: filter 0.25s ease-in-out;
+}
+
+.gallery-item:hover {
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.gallery-item-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 4px;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.gallery-item:hover .gallery-item-image {
+  transform: scale(1.05);
+}
+
+.gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+
+.gallery-item:hover .gallery-item-overlay {
+  opacity: 1;
+}
+
+.gallery-item-content {
+  text-align: center;
+  color: white;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover .gallery-item-content {
+  transform: translateY(0);
+}
+
+.gallery-item-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.gallery-item-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .companies-gallery-masonry {
+    columns: 2;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .companies-gallery-masonry {
+    columns: 5;
+  }
+}
+
+@media (max-width: 767px) {
+  .companies-gallery-section {
+    padding: 3rem 0;
+  }
+
+  .gallery-item-title {
+    font-size: 1.2rem;
+  }
+
+  .gallery-item-subtitle {
+    font-size: 0.8rem;
   }
 }
