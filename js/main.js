@@ -10,8 +10,11 @@ if (hamburger && navMenu) {
   const navLinks = document.querySelectorAll(".nav-menu a");
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
-      hamburger.classList.remove("active");
-      navMenu.classList.remove("active");
+      // Don't close menu for dropdown toggles (only for actual page links)
+      if (!link.classList.contains("dropdown-toggle")) {
+        hamburger.classList.remove("active");
+        navMenu.classList.remove("active");
+      }
     });
   });
 }
