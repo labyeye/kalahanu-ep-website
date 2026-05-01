@@ -1509,6 +1509,36 @@ section {
   margin-bottom: 3rem;
 }
 
+.ats-leaders-track{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+}
+
+@media (max-width: 1200px) {
+  .ats-leaders-track {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .ats-leaders-track {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .ats-leaders-track {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
 .leaders-track {
   display: flex;
   align-items: center;

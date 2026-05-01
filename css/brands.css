@@ -235,6 +235,422 @@
 
 .location-tag i { color: var(--secondary-color); }
 
+/* ── Hero CTA group ── */
+.hero-cta-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+/* ── ATS Team Section ── */
+.ats-team-section {
+  padding: 80px 0 90px;
+  background: var(--light-gray, #f8f9fa);
+}
+
+.ats-team-header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.ats-team-header .section-eyebrow {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.ats-team-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #1a1a2e;
+  font-weight: 400;
+  margin-bottom: 12px;
+}
+
+.ats-team-header h2 strong {
+  font-weight: 800;
+}
+
+.ats-team-header p {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* ── ATS Snake Process Section ── */
+.ats-snake-process {
+  padding: 90px 0 110px;
+  background: #ffffff;
+}
+
+.snake-header {
+  text-align: center;
+  margin-bottom: 64px;
+}
+
+.snake-eyebrow {
+  display: block;
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: #ffdd00;
+  margin-bottom: 14px;
+}
+
+.snake-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  color: #1a1a2e;
+  font-weight: 400;
+  line-height: 1.2;
+  margin-bottom: 14px;
+}
+
+.snake-header h2 strong {
+  font-weight: 800;
+}
+
+.snake-header p {
+  font-size: 1rem;
+  color: #888;
+}
+
+/* Wrapper: relative positioning context for the SVG overlay */
+.snake-wrapper {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* SVG absolutely fills the wrapper — stays BEHIND the steps via z-index */
+.snake-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  overflow: visible;
+}
+
+/* Steps sit in their own stacking context ABOVE the SVG */
+.snake-steps-container {
+  position: relative;
+  z-index: 1;
+}
+
+/* 4-column flex row */
+.snake-row {
+  display: flex;
+  justify-content: space-around;
+  gap: 0;
+}
+
+/* Gap between consecutive rows — must be wide enough for the semicircular curve to clear the text */
+.snake-row + .snake-row {
+  margin-top: 90px;
+}
+
+/* Individual step — centred text */
+.snake-step-item {
+  flex: 1;
+  text-align: center;
+  padding: 0 12px;
+}
+
+/* Icon circle — solid white background is what makes the line "disappear" behind it */
+.step-icon-wrap {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  border: 2px solid #d0d0d0;
+  background: #ffffff;          /* covers the SVG path behind it */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 16px;
+  font-size: 1.55rem;
+  color: #aaa;
+  position: relative;
+  z-index: 2;                   /* above SVG (z-index 0) */
+  transition: border-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.snake-step-item:hover .step-icon-wrap {
+  border-color: #000000;
+  color: #000000;
+  transform: translateY(-5px);
+  box-shadow: 0 10px 28px rgba(174, 131, 0, 0.18);
+}
+
+/* Step number badge */
+.step-num {
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: #F8CB57;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  opacity: 0.7;
+}
+
+.snake-step-item h4 {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.snake-step-item p {
+  font-size: 0.8rem;
+  color: #999;
+  line-height: 1.6;
+}
+
+/* Tablet: 2 rows of 4 is tight — allow wrapping */
+@media (max-width: 900px) {
+  .snake-svg { display: none; }
+
+  .snake-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+  }
+
+  .snake-row + .snake-row { margin-top: 32px; }
+
+  .snake-step-item {
+    flex: 0 0 42%;
+    max-width: 200px;
+  }
+}
+
+/* Mobile: single column */
+@media (max-width: 520px) {
+  .snake-step-item {
+    flex: 0 0 80%;
+    max-width: 280px;
+  }
+}
+
+/* ── ATS Steps Grid ── */
+.ats-steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.ats-step {
+  background: rgba(212, 157, 53, 0.05);
+  border: 1px solid rgba(212, 157, 53, 0.2);
+  padding: 2rem;
+  border-radius: 8px;
+  transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.ats-step::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--secondary-color), transparent);
+}
+
+.ats-step:hover {
+  background: rgba(212, 157, 53, 0.1);
+  border-color: var(--secondary-color);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(212, 157, 53, 0.15);
+}
+
+.ats-step .step-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+.ats-step h4 {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.ats-step p {
+  color: var(--text-light);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.ats-step i {
+  font-size: 2rem;
+  color: var(--secondary-color);
+  opacity: 0.8;
+  margin-right: 1rem;
+  transition: all 0.3s ease;
+}
+
+.ats-step:hover i {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+@media (max-width: 992px) {
+  .ats-steps-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .ats-steps-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ats-step {
+    padding: 1.5rem;
+  }
+
+  .ats-step .step-number {
+    font-size: 2rem;
+  }
+
+  .ats-step h4 {
+    font-size: 1.1rem;
+  }
+}
+
+/* ── ATS Gallery Section ── */
+.ats-gallery-section {
+  padding: 5rem 0;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1020 100%);
+  min-height: 500px;
+}
+
+.ats-gallery-section .section-header {
+  margin-bottom: 4rem;
+  color: #fff;
+  display: block;
+}
+
+.ats-gallery-section .section-eyebrow {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #d49d35;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.ats-gallery-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ats-gallery-section .section-header p {
+  font-size: 1rem;
+  opacity: 0.8;
+}
+
+.ats-gallery-masonry {
+  columns: 1;
+  column-gap: 1.5rem;
+}
+
+.ats-gallery-item {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  width: 100%;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  border-radius: 4px;
+  overflow: hidden;
+  break-inside: avoid;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.3));
+  transition: filter 0.25s ease-in-out;
+}
+
+.ats-gallery-item:hover {
+  filter: drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.3));
+}
+
+.ats-gallery-item-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  object-position: center;
+  border-radius: 4px;
+  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.ats-gallery-item:hover .ats-gallery-item-image {
+  transform: scale(1.05);
+}
+
+.ats-gallery-item-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212, 157, 53, 0.8) 0%, rgba(212, 157, 53, 0.4) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  backdrop-filter: blur(4px);
+}
+
+.ats-gallery-item:hover .ats-gallery-item-overlay {
+  opacity: 1;
+}
+
+.ats-gallery-item-content {
+  text-align: center;
+  color: white;
+  transform: translateY(20px);
+  transition: transform 0.4s ease;
+}
+
+.ats-gallery-item:hover .ats-gallery-item-content {
+  transform: translateY(0);
+}
+
+.ats-gallery-item-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.5px;
+}
+
+.ats-gallery-item-subtitle {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  font-weight: 500;
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  .ats-gallery-masonry {
+    columns: 2;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .ats-gallery-masonry {
+    columns: 3;
+  }
+}
+
 
 @media (max-width: 992px) {
     .why-brand-content { grid-template-columns: 1fr; }
