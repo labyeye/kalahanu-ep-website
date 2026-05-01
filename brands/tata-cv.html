@@ -147,17 +147,14 @@
       </div>
     </nav>
 
-    <section class="hero brand-hero">
-      <div class="hero-slider">
-        <div
-          class="slide active"
-          style="background-image: url(&quot;../images/hero-1.webp&quot;)"
-        ></div>
-        <div
-          class="slide"
-          style="background-image: url(&quot;../images/hero-3.webp&quot;)"
-        ></div>
-      </div>
+    <section
+      class="hero brand-hero"
+      style="
+        background-image: url(&quot;../images/channel-partner/tatacv/hero.png&quot;);
+        background-size: cover;
+        background-position: center;
+      "
+    >
       <div class="hero-overlay"></div>
       <div class="container">
         <div class="hero-content">
@@ -228,7 +225,10 @@
             </ul>
           </div>
           <div class="why-brand-image">
-            <img src="../images/tata-cv.webp" alt="Why Kalahanu Tata" />
+            <img
+              src="../images/channel-partner/tatacv/1.jpg"
+              alt="Why Kalahanu Tata"
+            />
           </div>
         </div>
       </div>
@@ -238,50 +238,80 @@
       <div class="container">
         <h2
           class="section-title"
-          style="color: var(--white); text-align: center"
+          style="color: var(--black); text-align: center"
         >
           Our Tata Range
         </h2>
-        <div class="products-slider-container">
-          <div class="products-track">
-            <div class="product-card">
-              <div class="product-image">
-                <img src="../images/tata-prima.webp" alt="Tata Prima" />
-              </div>
-              <div class="product-info">
-                <h4>Tata Prima</h4>
-                <p>Heavy Duty Long Haulage Giant</p>
-              </div>
+        <div
+          class="products-grid"
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 90px;
+            margin-top: 40px;
+          "
+        >
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="../images/products-companies/automobiles/ace.webp"
+                alt="Tata Ace"
+              />
             </div>
-
-            <div class="product-card">
-              <div class="product-image">
-                <img src="../images/tata-ace.webp" alt="Tata Ace" />
-              </div>
-              <div class="product-info">
-                <h4>Tata Ace Gold</h4>
-                <p>The Small Commercial Vehicle King</p>
-              </div>
+            <div class="product-info">
+              <h4>Tata Ace</h4>
+              <p>The Perfect Choice for Last-Mile Delivery</p>
             </div>
+          </div>
 
-            <div class="product-card">
-              <div class="product-image">
-                <img src="../images/tata-signa.webp" alt="Tata Signa" />
-              </div>
-              <div class="product-info">
-                <h4>Tata Signa</h4>
-                <p>Ultimate Driver Comfort & Efficiency</p>
-              </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="../images/products-companies/automobiles/bus.webp"
+                alt="Tata Bus"
+              />
             </div>
+            <div class="product-info">
+              <h4>Tata Bus</h4>
+              <p>The Perfect Choice for Public Transportation</p>
+            </div>
+          </div>
 
-            <div class="product-card">
-              <div class="product-image">
-                <img src="../images/tata-prima.webp" alt="Tata Prima" />
-              </div>
-              <div class="product-info">
-                <h4>Tata Ultra</h4>
-                <p>Modern Solutions for Modern Business</p>
-              </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="../images/products-companies/automobiles/magic.webp"
+                alt="Tata Magic"
+              />
+            </div>
+            <div class="product-info">
+              <h4>Tata Magic</h4>
+              <p>The Perfect Choice for Last-Mile Delivery</p>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="../images/products-companies/automobiles/ultra.webp"
+                alt="Tata Ultra"
+              />
+            </div>
+            <div class="product-info">
+              <h4>Tata Ultra</h4>
+              <p>Modern and Best Solutions for Modern Business</p>
+            </div>
+          </div>
+          <div class="product-card">
+            <div class="product-image">
+              <img
+                src="../images/products-companies/automobiles/yodha.webp"
+                alt="Tata Yodha"
+              />
+            </div>
+            <div class="product-info">
+              <h4>Tata Yodha</h4>
+              <p>Powerful Performance for Heavy-Duty Applications</p>
             </div>
           </div>
         </div>
@@ -313,7 +343,7 @@
       </div>
     </section>
 
-    <section class="masonry-section">
+    <!-- <section class="masonry-section">
       <div class="container">
         <h2 class="section-title" style="text-align: center">Gallery</h2>
         <div class="masonry-grid">
@@ -331,62 +361,78 @@
           </div>
         </div>
       </div>
-    </section>
-
-    <section class="locations-brand">
-      <div class="container">
-        <h2 class="section-title" style="text-align: center">
-          Serving All of Bihar
-        </h2>
-        <div class="locations-bihar-grid">
-          <div class="location-tag">
-            <i class="fas fa-map-marker-alt"></i> Patna
-          </div>
-          <div class="location-tag">
-            <i class="fas fa-map-marker-alt"></i> Muzaffarpur
-          </div>
-          <div class="location-tag">
-            <i class="fas fa-map-marker-alt"></i> Gaya
-          </div>
-          <div class="location-tag">
-            <i class="fas fa-map-marker-alt"></i> Bhagalpur
-          </div>
-          <div class="location-tag">
-            <i class="fas fa-map-marker-alt"></i> Darbhanga
-          </div>
-          <div class="location-tag">
-            <i class="fas fa-map-marker-alt"></i> Purnia
-          </div>
-        </div>
-      </div>
-    </section>
-
+    </section> -->
     <section
       class="faq-section"
-      style="padding: 8rem 0; background-color: var(--white)"
+      style="
+        padding: 8rem 0;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      "
     >
       <div class="container">
-        <h2 class="section-title" style="text-align: center">
+        <h2
+          class="section-title"
+          style="text-align: center; margin-bottom: 4rem; color: var(--dark)"
+        >
           Frequently Asked Questions
         </h2>
-        <div class="overview-text" style="max-width: 800px; margin: 0 auto">
-          <h3>What is the starting price of Tata Ace in Bihar?</h3>
-          <p>
-            Prices vary by configuration and offers. Please contact our Patna
-            showroom for an exact on-road quote today.
-          </p>
+        <div style="max-width: 900px; margin: 0 auto; display: grid; gap: 2rem">
+          <div
+            style="
+              background: white;
+              padding: 2rem;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              border-left: 4px solid #d49d35;
+            "
+          >
+            <h3 style="color: #d49d35; margin-bottom: 1rem; font-size: 1.1rem">
+              <i class="fas fa-question-circle" style="margin-right: 10px"></i
+              >What is the starting price of Tata Ace in Bihar?
+            </h3>
+            <p style="color: #666; line-height: 1.6; margin: 0">
+              Prices vary by configuration and offers. Please contact our Patna
+              showroom for an exact on-road quote today.
+            </p>
+          </div>
 
-          <h3>Do you provide finance for Tata trucks?</h3>
-          <p>
-            Yes, we have tie-ups with all major banks and NBFCs to provide
-            doorstep financing for all Tata vehicles.
-          </p>
+          <div
+            style="
+              background: white;
+              padding: 2rem;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              border-left: 4px solid #d49d35;
+            "
+          >
+            <h3 style="color: #d49d35; margin-bottom: 1rem; font-size: 1.1rem">
+              <i class="fas fa-question-circle" style="margin-right: 10px"></i
+              >Do you provide finance for Tata trucks?
+            </h3>
+            <p style="color: #666; line-height: 1.6; margin: 0">
+              Yes, we have tie-ups with all major banks and NBFCs to provide
+              doorstep financing for all Tata vehicles.
+            </p>
+          </div>
 
-          <h3>Is 24-hour service available for Prima users?</h3>
-          <p>
-            Absolutely. We provide dedicated 24/7 breakdown assistance for all
-            our heavy-duty customers across Bihar.
-          </p>
+          <div
+            style="
+              background: white;
+              padding: 2rem;
+              border-radius: 12px;
+              box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+              border-left: 4px solid #d49d35;
+            "
+          >
+            <h3 style="color: #d49d35; margin-bottom: 1rem; font-size: 1.1rem">
+              <i class="fas fa-question-circle" style="margin-right: 10px"></i
+              >Is 24-hour service available for Prima users?
+            </h3>
+            <p style="color: #666; line-height: 1.6; margin: 0">
+              Absolutely. We provide dedicated 24/7 breakdown assistance for all
+              our heavy-duty customers across Bihar.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -406,9 +452,7 @@
               <a href="#" aria-label="Facebook"
                 ><i class="fab fa-facebook-f"></i
               ></a>
-              <a href="#" aria-label="Twitter"
-                ><i class="fab fa-twitter"></i
-              ></a>
+
               <a href="#" aria-label="Instagram"
                 ><i class="fab fa-instagram"></i
               ></a>
@@ -463,20 +507,6 @@
               <li><a href="../truck-dealer-bihar.html">Locations</a></li>
               <li><a href="../about.html#companies">Companies</a></li>
               <li><a href="../about.html#awards">Awards</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Contact Info</h4>
-            <ul class="contact-info">
-              <li>
-                <i class="fas fa-map-marker-alt"></i><span>Bihar, India</span>
-              </li>
-              <li><i class="fas fa-phone"></i><span>+91-9199044101</span></li>
-              <li>
-                <i class="fas fa-envelope"></i
-                ><span>info@kalahanubothragroup.com</span>
-              </li>
             </ul>
           </div>
         </div>
