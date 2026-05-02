@@ -1721,7 +1721,17 @@ section {
 
 .ats-leaders-track{
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem 0;
+  flex-direction: column;
+  display: flex;
+}
+.ats-team{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   align-items: center;
   justify-content: center;
