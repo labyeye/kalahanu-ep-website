@@ -41,9 +41,11 @@
 .company-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg,
-      rgba(8, 8, 20, 0.82) 0%,
-      rgba(88, 41, 11, 0.45) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(8, 8, 20, 0.82) 0%,
+    rgba(88, 41, 11, 0.45) 100%
+  );
   z-index: 2;
 }
 
@@ -139,7 +141,6 @@
   right: 1.5rem;
 }
 
-
 .company-stats {
   padding: 4.5rem 0;
   background: var(--light-gray);
@@ -187,7 +188,6 @@
   letter-spacing: 1px;
   color: var(--text-light);
 }
-
 
 .director-section {
   padding: 5.5rem 0;
@@ -273,7 +273,6 @@
   font-style: italic;
 }
 
-
 .vm-section {
   padding: 5rem 0;
   background: #fff;
@@ -282,7 +281,6 @@
 .vm-section .section-header {
   margin-bottom: 3.5rem;
 }
-
 
 .company-brands-section {
   padding: 5rem 0;
@@ -331,9 +329,11 @@
 .cbrand-card .cbrand-icon {
   width: 72px;
   height: 72px;
-  background: linear-gradient(135deg,
-      var(--secondary-color),
-      var(--accent-color));
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -356,7 +356,6 @@
   color: var(--text-light);
   margin: 0;
 }
-
 
 .company-location {
   padding: 5rem 0;
@@ -424,7 +423,6 @@
   display: block;
 }
 
-
 .company-awards {
   padding: 5rem 0;
   background: var(--bg-light);
@@ -455,9 +453,11 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(90deg,
-      var(--secondary-color),
-      var(--accent-color));
+  background: linear-gradient(
+    90deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
 }
 
 .award-card:hover {
@@ -468,9 +468,11 @@
 .award-icon {
   width: 72px;
   height: 72px;
-  background: linear-gradient(135deg,
-      var(--secondary-color),
-      var(--accent-color));
+  background: linear-gradient(
+    135deg,
+    var(--secondary-color),
+    var(--accent-color)
+  );
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -503,7 +505,6 @@
   color: var(--text-light);
   margin: 0;
 }
-
 
 .company-faq {
   padding: 5rem 0;
@@ -575,7 +576,6 @@
   color: var(--text-secondary);
   font-size: 0.9375rem;
 }
-
 
 .company-testimonials {
   padding: 5.5rem 0;
@@ -711,7 +711,6 @@
   gap: 1.5rem;
 }
 
-
 .industries-serve {
   padding: 6rem 0;
   background: var(--primary-color);
@@ -771,8 +770,6 @@
   font-size: 0.9375rem;
   line-height: 1.6;
 }
-
-
 
 @media (max-width: 768px) {
   .company-hero-content h1 {
@@ -844,7 +841,11 @@
 .gallery-item-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(135deg, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgba(0, 0, 0, 0.4) 100%
+  );
   display: flex;
   align-items: center;
   justify-content: center;
