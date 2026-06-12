@@ -447,160 +447,191 @@
           </p>
         </div>
 
-        <div class="companies-grid">
-          
+        <div class="companies-pyramid">
 
-
-          <div class="company-card reveal-up" data-delay="150">
-            <div class="company-card-icon">
-              <img
-                class="company-card-img"
-                src="images/companies/industries.webp"
-                alt="Kalahanu Bothra Industries"
-              />
-            </div>
-            <div class="company-card-content">
-              <h3 class="company-card-name">
-                Kalahanu Bothra Industries Pvt Ltd
-              </h3>
-              <p class="company-card-desc">
-                State-of-the-art Authorized Testing Station (ATS) providing
-                vehicle fitness certification, compliance checks, and scrapping
-                services. Ensuring safety, regulatory adherence, and
-                environmental standards for commercial and private vehicles.
-              </p>
-              <a href="services/ats.html" class="company-card-link">
-                Learn More About Our Authorized Testing Station
-                <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
-          <div class="company-card reveal-up" data-delay="0">
-            <div class="company-card-icon">
-              <img
-                class="company-card-img"
-                src="images/companies/trading.webp"
-                alt="Kalahanu Bothra Trading"
-              />
-            </div>
-            <div class="company-card-content">
-              <h3 class="company-card-name">Kalahanu Bothra Trading Pvt Ltd</h3>
-              <p class="company-card-desc">
-                Leading distributor of Bajaj three-wheelers, offering durable
-                cargo and passenger vehicles designed for urban and rural
-                mobility. We provide end-to-end solutions including sales,
-                financing assistance, and service support for business owners.
-              </p>
-              <a href="channel-partners.html" class="company-card-link">
-                Learn More About Bajaj Three-Wheeler Distribution
-                <i class="fas fa-arrow-right"></i>
-              </a>
+          <!-- Row 1: Industries (top of pyramid) -->
+          <div class="pyramid-row pyramid-row--1">
+            <div class="company-card reveal-up" data-delay="0">
+              <div class="company-card-icon">
+                <img
+                  class="company-card-img"
+                  src="images/companies/industries.webp"
+                  alt="Kalahanu Bothra Industries"
+                />
+              </div>
+              <div class="company-card-content">
+                <h3 class="company-card-name">
+                  Kalahanu Bothra Industries Pvt Ltd
+                </h3>
+                <p class="company-card-desc">
+                  State-of-the-art Authorized Testing Station (ATS) providing
+                  vehicle fitness certification, compliance checks, and scrapping
+                  services. Ensuring safety, regulatory adherence, and
+                  environmental standards for commercial and private vehicles.
+                </p>
+                <a href="services/ats.html" class="company-card-link">
+                  Learn More About Our Authorized Testing Station
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="company-card reveal-up" data-delay="0">
-            <div class="company-card-icon">
-              <img
-                class="company-card-img"
-                src="images/companies/agencies.webp"
-                alt="Kalahanu Bothra Agencies"
-              />
-            </div>
-            <div class="company-card-content">
-              <h3 class="company-card-name">
-                Kalahanu Bothra Agencies Pvt Ltd
-              </h3>
-              <p class="company-card-desc">
-                Authorized Bajaj two-wheeler dealership delivering a wide range
-                of motorcycles and scooters. Focused on performance,
-                affordability, and service excellence, we help customers find
-                the perfect ride backed by trusted support and maintenance.
-              </p>
-              <a href="channel-partners.html" class="company-card-link">
-                Learn More About Bajaj Two-Wheeler Dealership
-                <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
+          <!-- Connector: Industries → Trading + Agencies -->
+          <div class="pyramid-connector" aria-hidden="true">
+            <svg viewBox="0 0 300 58" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="150" y1="0"  x2="150" y2="24" stroke="#d49d35" stroke-width="2"/>
+              <line x1="100" y1="24" x2="200" y2="24" stroke="#d49d35" stroke-width="2"/>
+              <line x1="100" y1="24" x2="100" y2="48" stroke="#d49d35" stroke-width="2"/>
+              <line x1="200" y1="24" x2="200" y2="48" stroke="#d49d35" stroke-width="2"/>
+              <polyline points="96,45 100,51 104,45" fill="none" stroke="#d49d35" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+              <polyline points="196,45 200,51 204,45" fill="none" stroke="#d49d35" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
           </div>
-          <div class="company-card reveal-up" data-delay="300">
-            <div class="company-card-icon">
-              <img
-                class="company-card-img"
-                src="images/companies/auto.webp"
-                alt="Kalahanu Automobile"
-              />
+
+          <!-- Row 2: Trading + Agencies -->
+          <div class="pyramid-row pyramid-row--2">
+            <div class="company-card reveal-up" data-delay="0">
+              <div class="company-card-icon">
+                <img
+                  class="company-card-img"
+                  src="images/companies/trading.webp"
+                  alt="Kalahanu Bothra Trading"
+                />
+              </div>
+              <div class="company-card-content">
+                <h3 class="company-card-name">Kalahanu Bothra Trading Pvt Ltd</h3>
+                <p class="company-card-desc">
+                  Leading distributor of Bajaj three-wheelers, offering durable
+                  cargo and passenger vehicles designed for urban and rural
+                  mobility. We provide end-to-end solutions including sales,
+                  financing assistance, and service support for business owners.
+                </p>
+                <a href="channel-partners.html" class="company-card-link">
+                  Learn More About Bajaj Three-Wheeler Distribution
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <div class="company-card-content">
-              <h3 class="company-card-name">Kalahanu Automobile Pvt Ltd</h3>
-              <p class="company-card-desc">
-                Authorized Tata commercial vehicle partner delivering reliable
-                LCV, ICV, and HCV solutions across Bihar. From vehicle sales to
-                after-sales support and genuine spare parts, we ensure
-                businesses stay on the road with maximum uptime and efficiency.
-              </p>
-              <a href="distribution.html" class="company-card-link">
-                Learn More About Tata Motors Commercial Vehicles
-                <i class="fas fa-arrow-right"></i>
-              </a>
+            <div class="company-card reveal-up" data-delay="150">
+              <div class="company-card-icon">
+                <img
+                  class="company-card-img"
+                  src="images/companies/agencies.webp"
+                  alt="Kalahanu Bothra Agencies"
+                />
+              </div>
+              <div class="company-card-content">
+                <h3 class="company-card-name">
+                  Kalahanu Bothra Agencies Pvt Ltd
+                </h3>
+                <p class="company-card-desc">
+                  Authorized Bajaj two-wheeler dealership delivering a wide range
+                  of motorcycles and scooters. Focused on performance,
+                  affordability, and service excellence, we help customers find
+                  the perfect ride backed by trusted support and maintenance.
+                </p>
+                <a href="channel-partners.html" class="company-card-link">
+                  Learn More About Bajaj Two-Wheeler Dealership
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div class="company-card reveal-up" data-delay="300">
-            <div class="company-card-icon">
-              <img
-                class="company-card-img"
-                src="images/companies/manufactures.webp"
-                alt="Kalahanu Bothra Manufactures"
-              />
+          <!-- Connector: Trading + Agencies → Automobile + Manufactures + Marketing -->
+          <div class="pyramid-connector" aria-hidden="true">
+            <svg viewBox="0 0 300 58" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+              <line x1="100" y1="0"  x2="100" y2="18" stroke="#d49d35" stroke-width="2"/>
+              <line x1="200" y1="0"  x2="200" y2="18" stroke="#d49d35" stroke-width="2"/>
+              <line x1="50"  y1="18" x2="250" y2="18" stroke="#d49d35" stroke-width="2"/>
+              <line x1="50"  y1="18" x2="50"  y2="48" stroke="#d49d35" stroke-width="2"/>
+              <line x1="150" y1="18" x2="150" y2="48" stroke="#d49d35" stroke-width="2"/>
+              <line x1="250" y1="18" x2="250" y2="48" stroke="#d49d35" stroke-width="2"/>
+              <polyline points="46,45 50,51 54,45"   fill="none" stroke="#d49d35" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+              <polyline points="146,45 150,51 154,45" fill="none" stroke="#d49d35" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+              <polyline points="246,45 250,51 254,45" fill="none" stroke="#d49d35" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+            </svg>
+          </div>
+
+          <!-- Row 3: Automobile + Manufactures + Marketing -->
+          <div class="pyramid-row pyramid-row--3">
+            <div class="company-card reveal-up" data-delay="0">
+              <div class="company-card-icon">
+                <img
+                  class="company-card-img"
+                  src="images/companies/auto.webp"
+                  alt="Kalahanu Automobile"
+                />
+              </div>
+              <div class="company-card-content">
+                <h3 class="company-card-name">Kalahanu Automobile Pvt Ltd</h3>
+                <p class="company-card-desc">
+                  Authorized Tata commercial vehicle partner delivering reliable
+                  LCV, ICV, and HCV solutions across Bihar. From vehicle sales to
+                  after-sales support and genuine spare parts, we ensure
+                  businesses stay on the road with maximum uptime and efficiency.
+                </p>
+                <a href="distribution.html" class="company-card-link">
+                  Learn More About Tata Motors Commercial Vehicles
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
-            <div class="company-card-content">
-              <h3 class="company-card-name">
-                Kalahanu Bothra Manufactures Pvt Ltd
-              </h3>
-              <p class="company-card-desc">
-                Bihar's 1st Registered Vehicle Scrapping Facility (RVSF). We
-                provide government-authorized, scientific, and eco-friendly
-                disposal of end-of-life vehicles with official certification and
-                road tax benefits for new purchases.
-              </p>
-              <a
-                href="companies/kalahanu-manufactures.html"
-                class="company-card-link"
-              >
-                Learn More About Our Vehicle Scrapping Facility
-                <i class="fas fa-arrow-right"></i>
-              </a>
+            <div class="company-card reveal-up" data-delay="150">
+              <div class="company-card-icon">
+                <img
+                  class="company-card-img"
+                  src="images/companies/manufactures.webp"
+                  alt="Kalahanu Bothra Manufactures"
+                />
+              </div>
+              <div class="company-card-content">
+                <h3 class="company-card-name">
+                  Kalahanu Bothra Manufactures Pvt Ltd
+                </h3>
+                <p class="company-card-desc">
+                  Bihar's 1st Registered Vehicle Scrapping Facility (RVSF). We
+                  provide government-authorized, scientific, and eco-friendly
+                  disposal of end-of-life vehicles with official certification and
+                  road tax benefits for new purchases.
+                </p>
+                <a
+                  href="companies/kalahanu-manufactures.html"
+                  class="company-card-link"
+                >
+                  Learn More About Our Vehicle Scrapping Facility
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
+            </div>
+            <div class="company-card company-card-upcoming reveal-up" data-delay="300">
+              <div class="company-card-icon">
+                <img
+                  class="company-card-img"
+                  src="images/companies/marketing.webp"
+                  alt="Kalahanu Marketing Pvt Ltd"
+                />
+              </div>
+              <div class="company-card-content">
+                <h3 class="company-card-name">Kalahanu Marketing Pvt Ltd</h3>
+                <p class="company-card-desc">
+                  Driving growth through strategic marketing, brand partnerships,
+                  and distribution of genuine Tata spare parts. Focused on
+                  expanding business reach with innovative campaigns and
+                  customer-centric solutions across automotive segments.
+                </p>
+                <a
+                  href="companies/kalahanu-marketing.html"
+                  class="company-card-link"
+                >
+                  Learn More About Marketing & Genuine Spare Parts
+                  <i class="fas fa-arrow-right"></i>
+                </a>
+              </div>
             </div>
           </div>
 
-          <div
-            class="company-card company-card-upcoming reveal-up"
-            data-delay="450"
-          >
-            <div class="company-card-icon">
-              <img
-                class="company-card-img"
-                src="images/companies/marketing.webp"
-                alt="Kalahanu Marketing Pvt Ltd"
-              />
-            </div>
-            <div class="company-card-content">
-              <h3 class="company-card-name">Kalahanu Marketing Pvt Ltd</h3>
-              <p class="company-card-desc">
-                Driving growth through strategic marketing, brand partnerships,
-                and distribution of genuine Tata spare parts. Focused on
-                expanding business reach with innovative campaigns and
-                customer-centric solutions across automotive segments.
-              </p>
-              <a
-                href="companies/kalahanu-marketing.html"
-                class="company-card-link"
-              >
-                Learn More About Marketing & Genuine Spare Parts
-                <i class="fas fa-arrow-right"></i>
-              </a>
-            </div>
-          </div>
         </div>
       </div>
     </section>
