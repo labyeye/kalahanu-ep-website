@@ -358,31 +358,78 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Hero video/image slider
+// Hero slider — background + floating cards
 (function () {
-  const slides = document.querySelectorAll(".hv-slide");
+  const slideData = [
+    {
+      tag: "Jewellery & Lifestyle",
+      name: "Indriya by Aditya Birla",
+      mainImg: "images/channel-partner/indriya/hero.webp",
+      peekImg: "images/channel-partner/indriya/1.webp",
+    },
+    {
+      tag: "Digital Services",
+      name: "Jio — Telecom Partner",
+      mainImg: "images/home-slide/jio.png",
+      peekImg: "images/channel-partner/tatacv/hero.webp",
+    },
+    {
+      tag: "Three-Wheeler Distribution",
+      name: "Bajaj Three-Wheeler",
+      mainImg: "images/home-slide/bajaj-three.png",
+      peekImg: "images/companies-gallery/trading/customer1.webp",
+    },
+    {
+      tag: "Industrial Testing",
+      name: "Authorized Testing Station",
+      mainImg: "images/home-slide/ats.png",
+      peekImg: "images/companies-gallery/ats/1.webp",
+    },
+    {
+      tag: "Commercial Vehicles",
+      name: "Kalahanu Automobile",
+      mainImg: "images/channel-partner/tatacv/hero.webp",
+      peekImg: "images/companies-gallery/agencies/customer1.webp",
+    },
+  ];
+
+  const bgs = document.querySelectorAll(".hv-bg");
   const dots = document.querySelectorAll(".hv-dot");
-  if (!slides.length) return;
+  const mainImg = document.querySelector(".hv-main-img");
+  const peekImg = document.querySelector(".hv-peek-img");
+  const cardTag = document.querySelector(".hv-card-main .hv-card-tag");
+  const cardName = document.querySelector(".hv-card-main .hv-card-name");
+
+  if (!bgs.length) return;
 
   let current = 0;
   let timer = null;
 
   function goTo(idx) {
-    slides[current].classList.remove("active");
+    bgs[current].classList.remove("active");
     dots[current].classList.remove("active");
-    current = (idx + slides.length) % slides.length;
-    slides[current].classList.add("active");
+    current = (idx + bgs.length) % bgs.length;
+    bgs[current].classList.add("active");
     dots[current].classList.add("active");
-  }
 
-  function next() {
-    goTo(current + 1);
+    const d = slideData[current];
+    if (mainImg) {
+      mainImg.style.opacity = "0";
+      mainImg.src = d.mainImg;
+      mainImg.onload = () => {
+        mainImg.style.opacity = "1";
+      };
+    }
+    if (peekImg) {
+      peekImg.src = slideData[(current + 1) % slideData.length].mainImg;
+    }
+    if (cardTag) cardTag.textContent = d.tag;
+    if (cardName) cardName.textContent = d.name;
   }
 
   function start() {
-    timer = setInterval(next, 6000);
+    timer = setInterval(() => goTo(current + 1), 6000);
   }
-
   function reset() {
     clearInterval(timer);
     start();
@@ -396,19 +443,25 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Animate hero stat counters on page load
-  const hvNumbers = document.querySelectorAll(".hv-stat-number");
-  hvNumbers.forEach((el) => {
+  document.querySelectorAll(".hv-stat-number").forEach((el) => {
     const target = parseInt(el.getAttribute("data-target"));
     if (!target) return;
-    let current = 0;
+    let count = 0;
     const step = target / 80;
     const tick = () => {
-      current = Math.min(current + step, target);
-      el.textContent = Math.floor(current);
-      if (current < target) requestAnimationFrame(tick);
+      count = Math.min(count + step, target);
+      el.textContent = Math.floor(count);
+      if (count < target) requestAnimationFrame(tick);
     };
     setTimeout(tick, 600);
   });
+
+  // Set initial card content from slideData[0]
+  const d0 = slideData[0];
+  if (mainImg) mainImg.src = d0.mainImg;
+  if (peekImg) peekImg.src = slideData[1].mainImg;
+  if (cardTag) cardTag.textContent = d0.tag;
+  if (cardName) cardName.textContent = d0.name;
 
   start();
 })();
