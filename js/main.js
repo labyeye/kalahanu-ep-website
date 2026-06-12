@@ -357,3 +357,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+
+// Hero video/image slider
+(function () {
+  const slides = document.querySelectorAll(".hv-slide");
+  const dots = document.querySelectorAll(".hv-dot");
+  if (!slides.length) return;
+
+  let current = 0;
+  let timer = null;
+
+  function goTo(idx) {
+    slides[current].classList.remove("active");
+    dots[current].classList.remove("active");
+    current = (idx + slides.length) % slides.length;
+    slides[current].classList.add("active");
+    dots[current].classList.add("active");
+  }
+
+  function next() {
+    goTo(current + 1);
+  }
+
+  function start() {
+    timer = setInterval(next, 6000);
+  }
+
+  function reset() {
+    clearInterval(timer);
+    start();
+  }
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      goTo(parseInt(dot.dataset.idx));
+      reset();
+    });
+  });
+
+  // Animate hero stat counters on page load
+  const hvNumbers = document.querySelectorAll(".hv-stat-number");
+  hvNumbers.forEach((el) => {
+    const target = parseInt(el.getAttribute("data-target"));
+    if (!target) return;
+    let current = 0;
+    const step = target / 80;
+    const tick = () => {
+      current = Math.min(current + step, target);
+      el.textContent = Math.floor(current);
+      if (current < target) requestAnimationFrame(tick);
+    };
+    setTimeout(tick, 600);
+  });
+
+  start();
+})();

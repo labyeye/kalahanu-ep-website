@@ -41,11 +41,9 @@
 .company-hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(8, 8, 20, 0.82) 0%,
-    rgba(88, 41, 11, 0.45) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(8, 8, 20, 0.82) 0%,
+      rgba(88, 41, 11, 0.45) 100%);
   z-index: 2;
 }
 
@@ -329,11 +327,9 @@
 .cbrand-card .cbrand-icon {
   width: 72px;
   height: 72px;
-  background: linear-gradient(
-    135deg,
-    var(--secondary-color),
-    var(--accent-color)
-  );
+  background: linear-gradient(135deg,
+      var(--secondary-color),
+      var(--accent-color));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -453,11 +449,9 @@
   left: 0;
   right: 0;
   height: 4px;
-  background: linear-gradient(
-    90deg,
-    var(--secondary-color),
-    var(--accent-color)
-  );
+  background: linear-gradient(90deg,
+      var(--secondary-color),
+      var(--accent-color));
 }
 
 .award-card:hover {
@@ -468,11 +462,9 @@
 .award-icon {
   width: 72px;
   height: 72px;
-  background: linear-gradient(
-    135deg,
-    var(--secondary-color),
-    var(--accent-color)
-  );
+  background: linear-gradient(135deg,
+      var(--secondary-color),
+      var(--accent-color));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -841,11 +833,9 @@
 .gallery-item-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.4) 100%
-  );
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.8) 0%,
+      rgba(0, 0, 0, 0.4) 100%);
   display: flex;
   align-items: center;
   justify-content: center;

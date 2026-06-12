@@ -277,89 +277,110 @@
       </div>
     </nav>
 
-    <section class="hero hero-split" id="home">
-      <div class="container">
-        <div class="hero-split-grid">
-          <div class="hero-content hero-content-split">
-            <span class="hero-eyebrow">Bihar's Premier Corporate Group</span>
+    <section class="hv-hero" id="home">
+      <!-- Slides: swap background-image for a <video> src when video files are ready -->
+      <div class="hv-slides">
+        <div
+          class="hv-slide"
+          style="
+            background-image: url(&quot;images/channel-partner/indriya/6.webp&quot;);
+          "
+        >
+          <span class="hv-slide-label">Franchise</span>
+        </div>
+        <div
+          class="hv-slide"
+          style="
+            background-image: url(&quot;images/companies/industries.webp&quot;);
+          "
+        >
+          <span class="hv-slide-label"
+            >Vehicle Fitness Testing &amp; Scrapping</span
+          >
+        </div>
+        <div
+          class="hv-slide"
+          style="background-image: url(&quot;images/home-slide/jio.png&quot;)"
+        >
+          <span class="hv-slide-label">Distribution</span>
+        </div>
+        <div
+          class="hv-slide"
+          style="
+            background-image: url(&quot;images/home-slide/bajaj-three.png&quot;);
+          "
+        >
+          <span class="hv-slide-label">Three-Wheeler Dealership</span>
+        </div>
+        <div
+          class="hv-slide active"
+          style="background-image: url(&quot;images/companies/auto.webp&quot;)"
+        >
+          <span class="hv-slide-label">Tata Commercial Vehicle Dealership</span>
+        </div>
+      </div>
 
-            <h1 class="hero-title hero-split-h1">
-              Kalahanu Bothra Group:<br />
-              <span class="hero-split-accent"
-                >Bihar's Leading Truck Dealer & Commercial Vehicle Group</span
-              >
-            </h1>
+      <div class="hv-overlay"></div>
 
-            <p class="hero-split-desc">
-              A diversified group spanning
-              <a href="#companies" class="hero-split-highlight"
-                >commercial vehicles, distribution, and industrial services</a
-              >
-              across Bihar.
-            </p>
+      <div class="hv-content">
+        <div class="container">
+          <span class="hv-eyebrow">Bihar's Premier Corporate Group</span>
+          <h1 class="hv-title">Kalahanu Bothra Group</h1>
+          <p class="hv-subtitle">
+            A diversified group spanning
+            <strong
+              >commercial vehicles, retail, distribution &amp; industrial
+              services</strong
+            >
+            across Bihar.
+          </p>
 
-            <div class="hero-stats hero-stats-light">
-              <div class="hero-stat-item">
-                <div class="hero-stat-value">
-                  <span class="hero-stat-number" data-target="30">30</span
-                  ><span class="hero-stat-suffix">+</span>
-                </div>
-                <span class="hero-stat-label">Years Experience</span>
+          <div class="hv-stats">
+            <div class="hv-stat-item">
+              <div class="hv-stat-val">
+                <span class="hv-stat-number" data-target="30">30</span
+                ><span class="hv-stat-sfx">+</span>
               </div>
-              <div class="hero-stat-divider" aria-hidden="true"></div>
-              <div class="hero-stat-item">
-                <div class="hero-stat-value">
-                  <span class="hero-stat-number" data-target="3000">3000</span
-                  ><span class="hero-stat-suffix">+</span>
-                </div>
-                <span class="hero-stat-label">Vehicles Delivered</span>
-              </div>
-              <div class="hero-stat-divider" aria-hidden="true"></div>
-              <div class="hero-stat-item">
-                <div class="hero-stat-value">
-                  <span class="hero-stat-number" data-target="2500">2500</span
-                  ><span class="hero-stat-suffix">+</span>
-                </div>
-                <span class="hero-stat-label">Happy Clients</span>
-              </div>
+              <span class="hv-stat-lbl">Years Experience</span>
             </div>
-
-            <div class="hero-buttons hero-buttons-split">
-              <a href="#companies" class="btn btn-split-primary"
-                >Explore Companies</a
-              >
-              <a href="contact.html" class="btn btn-split-secondary"
-                >Contact Us</a
-              >
+            <div class="hv-stat-divider" aria-hidden="true"></div>
+            <div class="hv-stat-item">
+              <div class="hv-stat-val">
+                <span class="hv-stat-number" data-target="3000">3000</span
+                ><span class="hv-stat-sfx">+</span>
+              </div>
+              <span class="hv-stat-lbl">Vehicles Delivered</span>
+            </div>
+            <div class="hv-stat-divider" aria-hidden="true"></div>
+            <div class="hv-stat-item">
+              <div class="hv-stat-val">
+                <span class="hv-stat-number" data-target="2500">2500</span
+                ><span class="hv-stat-sfx">+</span>
+              </div>
+              <span class="hv-stat-lbl">Happy Clients</span>
             </div>
           </div>
 
-          <div class="hero-visual-col">
-            <div class="hero-vc-outer">
-              <div class="hero-vc-card">
-                <img
-                  src="images/leaders/kamal.webp"
-                  class="hero-vc-img"
-                  alt="Kamal Kumar Bothra, Director - Kalahanu Bothra Group"
-                />
-                <div class="hero-vc-footer">
-                  <strong>Kamal Kumar Bothra, Director</strong>
-                  <span>PATNA, BIHAR</span>
-                </div>
-              </div>
-            </div>
-            <div class="hero-float-card">
-              <p>
-                Bihar's leading group scaling commercial operations across the
-                state.
-              </p>
-              <span class="hero-float-location"> Patna, Bihar </span>
-            </div>
+          <div class="hv-buttons">
+            <a href="#companies" class="hv-btn-primary">Explore Companies</a>
+            <a href="contact.html" class="hv-btn-secondary">Contact Us</a>
           </div>
         </div>
       </div>
 
-      <div class="scroll-indicator scroll-indicator-dark" aria-hidden="true">
+      <div class="hv-dots" role="tablist" aria-label="Hero slides">
+        <button
+          class="hv-dot active"
+          data-idx="0"
+          aria-label="Slide 1"
+        ></button>
+        <button class="hv-dot" data-idx="1" aria-label="Slide 2"></button>
+        <button class="hv-dot" data-idx="2" aria-label="Slide 3"></button>
+        <button class="hv-dot" data-idx="3" aria-label="Slide 4"></button>
+        <button class="hv-dot" data-idx="4" aria-label="Slide 5"></button>
+      </div>
+
+      <div class="scroll-indicator" aria-hidden="true">
         <span class="scroll-indicator-line"></span>
         <i class="fas fa-chevron-down"></i>
       </div>
@@ -603,7 +624,7 @@
           <div class="about-group-image reveal-left">
             <div class="about-image-wrap">
               <img
-                src="images/channel-partner/tatacv/hero.webp"
+                src="images/channel-partner/indriya/hero.webp"
                 alt="Kalahanu Bothra Group — Commercial Vehicle Showroom"
               />
             </div>
